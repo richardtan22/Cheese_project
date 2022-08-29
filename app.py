@@ -52,7 +52,7 @@ def prediction(filename):
       "class3":number_to_class[index[2]],
       "prob1":probabilities[index[1]],
       "prob2":probabilities[index[0]],
-      "prob2":probabilities[index[2]]
+      "prob3":probabilities[index[2]]
      }
     #Step 5
     return render_template('predict.html', predictions=predictions)
