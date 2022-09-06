@@ -1,22 +1,27 @@
 <script>
-  window.watsonAssistantChatOptions = {
-    integrationID: "3c4efec2-001f-4c56-a952-71b81c5d400b", // The ID of this integration.
-    region: "us-south", // The region your integration is hosted in.
-    serviceInstanceID: "a0dad166-396d-4304-99f0-48f18f7863a7", // The ID of your service instance.
-    onLoad: function(instance) { instance.render(); }
-  };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-    document.head.appendChild(t);
-  });
+    window.watsonAssistantChatOptions = {
+      integrationID: "3c4efec2-001f-4c56-a952-71b81c5d400b", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "a0dad166-396d-4304-99f0-48f18f7863a7", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
 </script>
-
-<!doctype html> <html> <head>
-    <title>Classify your Image!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> </head> <body style="background-color:black"> <div id="maintext" 
-style="position:absolute; margin:auto; width:700px; height:200px; text-align:center; top:0; bottom: 0; left: 0; right: 0;">
+  
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Classify your Image!</title>
+  <img src="Cheese.jpeg">
+</head>
+<body>
+  <div id="maintext" 
+            style="position:absolute; margin:auto; width:700px; height:100px; text-align:center; top:0; bottom: 0; left: 0; right: 0;"
+        >
   <h1 class="text-light mb-2"> Upload your image to be classified! </h1>
   <h4 class="text-light mb-5">(Please upload images less than 500kb in size)</h4>
   <form method=post enctype=multipart/form-data>
@@ -24,5 +29,6 @@ style="position:absolute; margin:auto; width:700px; height:200px; text-align:cen
         <input type=file name=file>
         <input type=submit value=Upload>
      </p>
-  </form> </div> </body>
+  
+</body>
 </html>
